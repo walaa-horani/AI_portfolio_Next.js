@@ -11,7 +11,6 @@ import service from './service'
 import contact from './contact'
 import siteSettings from './siteSettings'
 import navigation from './navigation'
-import { about } from './about'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
