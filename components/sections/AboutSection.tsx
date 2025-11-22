@@ -41,7 +41,7 @@ const ABOUT_QUERY = defineQuery(`*[_id == "singleton-profile"][0]{
           {/* Stats */}
       {profile.stats?.length > 0 && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {profile.stats.map((s, i) => (
+            {profile.stats.map((s: { label?: string; value?: string; _key: string }, i: number) => (
               <div key={i} className="text-center">
                 <p className="text-3xl font-bold text-cyan-800">{s.value}</p>
                 <p className="text-sm text-gray-500">{s.label}</p>
