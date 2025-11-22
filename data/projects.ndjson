@@ -1,0 +1,3 @@
+{ "_type": "project", "title": "AI Expense Tracker", "slug": {"_type":"slug","current":"ai-expense-tracker"}, "category":"web-app", "featured": true }
+{ "_type": "project", "title": "Learning Dashboard", "slug": {"_type":"slug","current":"learning-dashboard"}, "category":"web-app" }
+{ "_type": "project", "title": "ChatGPT Study Assistant", "slug": {"_type":"slug","current":"study-assistant"}, "category":"ai-ml" }

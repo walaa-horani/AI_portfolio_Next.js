@@ -1,0 +1,2085 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "firstName",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "lastName",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "E.g., 'Full-Stack Developer & AI Engineer'",
+        "name": "headline",
+        "type": "string",
+        "title": "Professional Headline"
+      },
+      {
+        "placeholder": "I build",
+        "description": "The static part of your animated headline (e.g., 'I build')",
+        "name": "headlineStaticText",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "max",
+                "constraint": 300
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Brief introduction (2-3 sentences)",
+        "name": "shortBio",
+        "type": "text"
+      },
+      {
+        "description": "Detailed about section with rich text formatting",
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "fullBio",
+        "type": "array"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "description": "Important for SEO and accessibility",
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "profileImage",
+        "type": "image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "title": "Phone Number"
+      },
+      {
+        "description": "E.g., Germany, Spain...",
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "github",
+            "type": "url",
+            "title": "GitHub"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "linkedin",
+            "type": "url",
+            "title": "LinkedIn"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "X",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "website",
+            "type": "url",
+            "title": "Personal Website"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "youtube",
+            "type": "url",
+            "title": "YouTube"
+          }
+        ],
+        "name": "socialLinks",
+        "type": "object"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "yearsOfExperience",
+        "type": "number",
+        "title": "Years of Experience"
+      },
+      {
+        "description": "Key statistics to display on your about section",
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "label",
+                "type": "string"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "description": "E.g., '50+', '100%', '24/7'",
+                "name": "value",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "stats",
+        "type": "array",
+        "title": "Profile Statistics"
+      }
+    ],
+    "name": "profile",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Project Title"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 150
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Short one-liner about the project",
+        "name": "tagline",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "coverImage",
+        "type": "image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 8
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "to": [
+              {
+                "type": "skill"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to skills"
+          }
+        ],
+        "name": "technologies",
+        "type": "array",
+        "title": "Technologies Used"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Web Application",
+              "value": "web-app"
+            },
+            {
+              "title": "Mobile App",
+              "value": "mobile-app"
+            },
+            {
+              "title": "AI/ML Project",
+              "value": "ai-ml"
+            },
+            {
+              "title": "API/Backend",
+              "value": "api-backend"
+            },
+            {
+              "title": "Game",
+              "value": "game"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "web-app",
+                  "mobile-app",
+                  "ai-ml",
+                  "api-backend",
+                  "game",
+                  "other"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string",
+        "title": "Project Category"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "liveDemo",
+        "type": "url"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "githubUrl",
+        "type": "url",
+        "title": "GitHub URL"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Project"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "project",
+    "type": "document",
+    "title": "Projects"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Skill Name"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Frontend",
+              "value": "frontend"
+            },
+            {
+              "title": "Backend",
+              "value": "backend"
+            },
+            {
+              "title": "AI/ML",
+              "value": "ai-ml"
+            },
+            {
+              "title": "Database",
+              "value": "database"
+            },
+            {
+              "title": "Mobile",
+              "value": "mobile"
+            },
+            {
+              "title": "Testing",
+              "value": "testing"
+            },
+            {
+              "title": "Design",
+              "value": "design"
+            },
+            {
+              "title": "Tools",
+              "value": "tools"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "frontend",
+                  "backend",
+                  "ai-ml",
+                  "database",
+                  "mobile",
+                  "testing",
+                  "design",
+                  "tools",
+                  "other"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Beginner",
+              "value": "beginner"
+            },
+            {
+              "title": "Intermediate",
+              "value": "intermediate"
+            },
+            {
+              "title": "Advanced",
+              "value": "advanced"
+            },
+            {
+              "title": "Expert",
+              "value": "expert"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "beginner",
+                  "intermediate",
+                  "advanced",
+                  "expert"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "proficiency",
+        "type": "string",
+        "title": "Proficiency Level"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 0
+              },
+              {
+                "flag": "max",
+                "constraint": 100
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "0-100 for visual progress bars",
+        "name": "percentage",
+        "type": "number",
+        "title": "Proficiency Percentage"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "yearsOfExperience",
+        "type": "number",
+        "title": "Years of Experience"
+      },
+      {
+        "description": "Hex color code for the skill badge (e.g., #61DAFB for React)",
+        "name": "color",
+        "type": "string",
+        "title": "Brand Color"
+      }
+    ],
+    "name": "skill",
+    "type": "document",
+    "title": "Skills"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "company",
+        "type": "string",
+        "title": "Company Name"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "position",
+        "type": "string",
+        "title": "Position/Role"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Full-time",
+              "value": "full-time"
+            },
+            {
+              "title": "Part-time",
+              "value": "part-time"
+            },
+            {
+              "title": "Contract",
+              "value": "contract"
+            },
+            {
+              "title": "Freelance",
+              "value": "freelance"
+            },
+            {
+              "title": "Internship",
+              "value": "internship"
+            }
+          ]
+        },
+        "name": "employmentType",
+        "type": "string"
+      },
+      {
+        "description": "City, State or 'Remote'",
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "startDate",
+        "type": "date"
+      },
+      {
+        "description": "Leave blank if current position",
+        "name": "endDate",
+        "type": "date"
+      },
+      {
+        "initialValue": false,
+        "name": "current",
+        "type": "boolean",
+        "title": "Current Position"
+      },
+      {
+        "description": "Detailed job responsibilities and achievements",
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "description",
+        "type": "array"
+      },
+      {
+        "description": "Bullet points of main responsibilities",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "responsibilities",
+        "type": "array",
+        "title": "Key Responsibilities"
+      },
+      {
+        "description": "Quantifiable accomplishments",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "achievements",
+        "type": "array",
+        "title": "Key Achievements"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "skill"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to skills"
+          }
+        ],
+        "name": "technologies",
+        "type": "array",
+        "title": "Technologies Used"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "companyLogo",
+        "type": "image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "companyWebsite",
+        "type": "url"
+      },
+      {
+        "initialValue": 0,
+        "description": "Lower numbers appear first (typically newest jobs first)",
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "experience",
+    "type": "document",
+    "title": "Work Experience"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "institution",
+        "type": "string",
+        "title": "Institution Name"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "E.g., 'Bachelor of Science', 'Master of Computer Science'",
+        "name": "degree",
+        "type": "string"
+      },
+      {
+        "description": "E.g., 'Computer Science', 'Software Engineering'",
+        "name": "fieldOfStudy",
+        "type": "string",
+        "title": "Field of Study"
+      },
+      {
+        "name": "startDate",
+        "type": "date"
+      },
+      {
+        "description": "Leave blank if currently enrolled",
+        "name": "endDate",
+        "type": "date"
+      },
+      {
+        "initialValue": false,
+        "name": "current",
+        "type": "boolean",
+        "title": "Currently Enrolled"
+      },
+      {
+        "rows": 4,
+        "description": "Notable courses, achievements, or activities",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "description": "Dean's List, Scholarships, Awards, etc.",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "achievements",
+        "type": "array",
+        "title": "Achievements & Honors"
+      }
+    ],
+    "name": "education",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Client/Person Name"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "company",
+        "type": "string",
+        "title": "Company/Organization"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "avatar",
+        "type": "image",
+        "title": "Avatar/Photo"
+      },
+      {
+        "rows": 5,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "testimonial",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 5
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "1-5 stars",
+        "name": "rating",
+        "type": "number"
+      },
+      {
+        "name": "date",
+        "type": "date",
+        "title": "Date Received"
+      },
+      {
+        "initialValue": false,
+        "description": "Show on homepage",
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Testimonial"
+      }
+    ],
+    "name": "testimonial",
+    "type": "document",
+    "title": "Testimonials"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Certification Name"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "E.g., 'AWS', 'Google Cloud', 'Microsoft'",
+        "name": "issuer",
+        "type": "string",
+        "title": "Issuing Organization"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "issueDate",
+        "type": "date"
+      },
+      {
+        "rows": 3,
+        "description": "What skills or knowledge this certification represents",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "skill"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to skills"
+          }
+        ],
+        "name": "skills",
+        "type": "array",
+        "title": "Related Skills"
+      }
+    ],
+    "name": "certification",
+    "type": "document",
+    "title": "Certifications"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Achievement Title"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Built a Full Project",
+              "value": "project"
+            },
+            {
+              "title": "Solved a Major Bug",
+              "value": "bug-fix"
+            },
+            {
+              "title": "Completed a Coding Course",
+              "value": "course"
+            },
+            {
+              "title": "Contributed to Open Source",
+              "value": "open-source"
+            },
+            {
+              "title": "Published a Technical Article",
+              "value": "article"
+            },
+            {
+              "title": "Won a Coding Competition",
+              "value": "competition"
+            },
+            {
+              "title": "Reached a Learning Milestone",
+              "value": "milestone"
+            },
+            {
+              "title": "Got a Certificate",
+              "value": "certificate"
+            },
+            {
+              "title": "Gave a Tech Talk or Workshop",
+              "value": "talk"
+            },
+            {
+              "title": "Improved Project Performance",
+              "value": "performance"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "description": "Who awarded this?",
+        "name": "issuer",
+        "type": "string",
+        "title": "Issuing Organization"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "date",
+        "type": "date",
+        "title": "Date Achieved"
+      },
+      {
+        "rows": 4,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Achievement"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "achievement",
+    "type": "document",
+    "title": "Achievements & Awards"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Service Title"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Icon or illustration representing the service",
+        "name": "icon",
+        "type": "image",
+        "title": "Icon/Image"
+      },
+      {
+        "rows": 2,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 150
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Brief one-liner",
+        "name": "shortDescription",
+        "type": "text"
+      },
+      {
+        "description": "Detailed description of the service",
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "fullDescription",
+        "type": "array"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "skill"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to skills"
+          }
+        ],
+        "name": "technologies",
+        "type": "array"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Service"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Services"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "subject",
+        "type": "string"
+      },
+      {
+        "rows": 5,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "message",
+        "type": "text"
+      },
+      {
+        "name": "submittedAt",
+        "type": "datetime"
+      }
+    ],
+    "name": "contact",
+    "type": "document",
+    "title": "Contact Form Submissions"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "siteTitle",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Meta description for SEO",
+        "name": "siteDescription",
+        "type": "text"
+      },
+      {
+        "description": "SEO keywords",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "siteKeywords",
+        "type": "array"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "siteLogo",
+        "type": "image"
+      },
+      {
+        "description": "32x32 px recommended",
+        "name": "favicon",
+        "type": "image"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Default image for social media sharing (1200x630 recommended)",
+        "name": "ogImage",
+        "type": "image",
+        "title": "Open Graph Image"
+      },
+      {
+        "description": "Hex color code (e.g., #3B82F6)",
+        "name": "primaryColor",
+        "type": "string",
+        "title": "Primary Brand Color"
+      },
+      {
+        "description": "Hex color code",
+        "name": "secondaryColor",
+        "type": "string",
+        "title": "Secondary Brand Color"
+      },
+      {
+        "description": "Hex color code for CTAs and highlights",
+        "name": "accentColor",
+        "type": "string"
+      },
+      {
+        "description": "Primary call-to-action button text (e.g., 'Hire Me', 'Get in Touch')",
+        "name": "ctaText",
+        "type": "string",
+        "title": "Main CTA Text"
+      },
+      {
+        "description": "Where the CTA button leads (e.g., #contact, /contact)",
+        "name": "ctaUrl",
+        "type": "string",
+        "title": "Main CTA URL"
+      },
+      {
+        "description": "Main headline on homepage",
+        "name": "heroHeadline",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "heroSubheadline",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "heroBackground",
+        "type": "image",
+        "title": "Hero Background Image"
+      },
+      {
+        "initialValue": true,
+        "name": "showBlog",
+        "type": "boolean",
+        "title": "Show Blog Section"
+      },
+      {
+        "initialValue": true,
+        "name": "showServices",
+        "type": "boolean",
+        "title": "Show Services Section"
+      },
+      {
+        "initialValue": true,
+        "name": "showTestimonials",
+        "type": "boolean",
+        "title": "Show Testimonials Section"
+      },
+      {
+        "description": "GA tracking ID (e.g., G-XXXXXXXXXX)",
+        "name": "googleAnalyticsId",
+        "type": "string",
+        "title": "Google Analytics ID"
+      },
+      {
+        "name": "facebookPixelId",
+        "type": "string",
+        "title": "Facebook Pixel ID"
+      },
+      {
+        "description": "For Twitter card metadata (without @)",
+        "name": "twitterHandle",
+        "type": "string"
+      },
+      {
+        "fields": [
+          {
+            "rows": 2,
+            "name": "text",
+            "type": "text",
+            "title": "Footer Text"
+          },
+          {
+            "description": "E.g., '© 2025 Your Name. All rights reserved.'",
+            "name": "copyrightText",
+            "type": "string"
+          },
+          {
+            "of": [
+              {
+                "fields": [
+                  {
+                    "name": "title",
+                    "type": "string"
+                  },
+                  {
+                    "name": "url",
+                    "type": "string",
+                    "title": "URL"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "name": "links",
+            "type": "array",
+            "title": "Footer Links"
+          }
+        ],
+        "name": "footer",
+        "type": "object",
+        "title": "Footer Settings"
+      },
+      {
+        "initialValue": false,
+        "description": "Enable to show maintenance page",
+        "name": "maintenanceMode",
+        "type": "boolean"
+      },
+      {
+        "rows": 3,
+        "name": "maintenanceMessage",
+        "type": "text"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Link Title"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Page anchor (e.g., '#about') or external URL (e.g., 'https://github.com/username')",
+        "name": "href",
+        "type": "string",
+        "title": "Link URL"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Tabler icon name (e.g., 'IconHome', 'IconBrandGithub')",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name"
+      },
+      {
+        "initialValue": false,
+        "description": "Toggle if this link goes to an external website",
+        "name": "isExternal",
+        "type": "boolean",
+        "title": "External Link"
+      },
+      {
+        "initialValue": 0,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Lower numbers appear first",
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "navigation",
+    "type": "document"
+  }
+]
