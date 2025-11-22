@@ -11,6 +11,7 @@
     "typegen": "sanity schema extract && sanity typegen generate"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.35.1",
     "@modelcontextprotocol/sdk": "^1.22.0",
     "@openai/chatkit-react": "^1.2.1",
     "@radix-ui/react-dialog": "^1.1.15",
