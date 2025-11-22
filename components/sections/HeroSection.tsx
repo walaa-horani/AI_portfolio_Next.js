@@ -52,21 +52,29 @@ const HERO_QUERY = defineQuery(`
 
      <div className='flex gap-3 mt-6'>
 
-      <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
-        <Link className='text-cyan-800 font-bold' href={profile?.socialLinks?.github}>Github</Link>
-      </div>
+      {profile?.socialLinks?.github && (
+        <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
+          <Link className='text-cyan-800 font-bold' href={profile.socialLinks.github}>Github</Link>
+        </div>
+      )}
 
-      <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
-        <Link className='text-cyan-800 font-bold' href={profile?.socialLinks?.youtube}>YouTube</Link>
-      </div>
+      {profile?.socialLinks?.youtube && (
+        <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
+          <Link className='text-cyan-800 font-bold' href={profile.socialLinks.youtube}>YouTube</Link>
+        </div>
+      )}
 
-      <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
-        <Link className='text-cyan-800 font-bold' href={profile?.socialLinks?.github}>Personal Web</Link>
-      </div>
+      {profile?.socialLinks?.website && (
+        <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
+          <Link className='text-cyan-800 font-bold' href={profile.socialLinks.website}>Personal Web</Link>
+        </div>
+      )}
 
-      <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
-        <Link className='text-cyan-800 font-bold' href={profile?.socialLinks?.github}>Twitter</Link>
-      </div>
+      {profile?.socialLinks?.X && (
+        <div className='shadow-md p-2.5 rounded-2xl transition hover:bg-gray-200'>
+          <Link className='text-cyan-800 font-bold' href={profile.socialLinks.X}>Twitter</Link>
+        </div>
+      )}
      </div>
       
      <div className='flex items-center mt-7 gap-4'>
